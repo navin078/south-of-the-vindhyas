@@ -1,6 +1,9 @@
 ---
 title: About
 date: 2026-06-22
+layout: post.njk
+tags:
+  - posts
 ---
 
 ## About
