@@ -1,0 +1,15 @@
+---
+permalink: /posts-index.json
+---
+[
+{%- for post in collections.posts %}
+  {
+    "title": {{ post.data.title | jsonify | safe }},
+    "url": {{ post.url | url | jsonify | safe }},
+    "date": {{ post.date | htmlDateString | jsonify | safe }},
+    "tags": {{ post.data.tags | default([]) | jsonify | safe }},
+    "railway_lines": {{ post.data.railway_lines | default([]) | jsonify | safe }},
+    "railway_stations": {{ post.data.railway_stations | default([]) | jsonify | safe }}
+  }{% if not loop.last %},{% endif %}
+{%- endfor %}
+]

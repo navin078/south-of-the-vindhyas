@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} — South of the Vindhyas</title>
-    <style>
-        body { font-family: Georgia, serif; max-width: 650px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #333; }
-        a { color: #2a5d8f; }
-        nav { margin-bottom: 2rem; }
-        nav a { margin-right: 1rem; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} - South of the Vindhyas</title>
+  <link rel="stylesheet" href="{{ '/assets/site.css' | url }}">
 </head>
 <body>
-    <nav>
-        <a href="../">Map</a>
-        <a href="../blog/">Blog</a>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="{{ '/' | url }}">Map</a>
+      <a href="{{ '/blog/' | url }}">Blog</a>
     </nav>
+  </header>
+  <main class="content">
     {{ content | safe }}
+  </main>
 </body>
 </html>

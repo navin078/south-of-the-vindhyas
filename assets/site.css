@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light;
+  --ink: #1f2933;
+  --muted: #637381;
+  --paper: #fbfaf6;
+  --line: #2c7f8f;
+  --line-travelled: #d86f45;
+  --station: #f2b84b;
+  --station-stroke: #6e4b12;
+  --link: #0e6b7f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--link);
+}
+
+.site-header {
+  border-bottom: 1px solid rgba(31, 41, 51, 0.12);
+}
+
+.site-nav,
+.map-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.site-nav {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.site-nav a,
+.map-nav a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.post h1,
+.content h1 {
+  line-height: 1.15;
+}
+
+.post-list {
+  padding-left: 1.25rem;
+}
+
+.post-list li {
+  margin: 0.6rem 0;
+}
+
+.post-list time {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.map-page {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.map-header {
+  position: absolute;
+  top: 0.85rem;
+  left: 3.6rem;
+  z-index: 1000;
+}
+
+.map-nav {
+  min-height: 2.5rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(31, 41, 51, 0.12);
+  border-radius: 6px;
+  background: rgba(251, 250, 246, 0.94);
+  box-shadow: 0 8px 24px rgba(31, 41, 51, 0.14);
+  backdrop-filter: blur(8px);
+}
+
+#map {
+  width: 100vw;
+  height: 100vh;
+}
+
+.leaflet-popup-content {
+  min-width: 12rem;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.45;
+}
+
+.popup-title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.popup-meta {
+  margin: 0 0 0.55rem;
+  color: var(--muted);
+}
+
+.popup-posts {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+@media (max-width: 640px) {
+  .map-header {
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .map-nav {
+    width: fit-content;
+  }
+}
